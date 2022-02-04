@@ -1,0 +1,476 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+    text-decoration: none
+
+body
+    header.background-header
+        @include mixins.background-image
+        @include mixins.extra-small
+                background-image: url("../images/mobile/image-header.jpg") 
+                min-height: 400px
+                height: 100vh
+        
+        
+        height: 100vh
+        min-height: 400px
+        background-color: hsl(200,100%,62%)
+        background-image: url("../images/desktop/image-header.jpg")
+
+        menu
+            @include mixins.flex-center
+            justify-content: space-between
+            width: 100%
+            height: 50px
+            padding: 20px 30px 0px 30px
+
+            a.logo
+                @include mixins.background-image
+                width: 100px
+                height: 20px
+                background-image: url("../images/logo.svg")
+            
+            ul 
+                @include mixins.flex-center
+                @include mixins.extra-small
+                    display: none
+                
+                list-style: none
+                li 
+                    margin: 0px 15px 0px 15px
+
+                    a 
+                        color: variables.$white
+                        font-family: variables.$barlow
+                        font-size: 12px
+
+                        &.contact
+                            color: variables.$white
+                            font-family: variables.$barlow
+                            font-size: 12px
+                            color: black
+                            background: variables.$white
+                            border-radius: 15px
+                            padding: 7px 15px 7px 15px
+                            text-transform: uppercase
+                            font-weight: 700
+            div.hamburger
+                @include mixins.background-image
+                @include mixins.extra-small
+                    display: block    
+
+                background-image: url("../images/icon-hamburger.svg")
+                width: 20px
+                height: 20px
+                display: none
+                cursor: pointer
+                
+        div.header-text
+            @include mixins.flex-center
+            flex-direction: column
+
+            h2
+                font-family: variables.$fraunces
+                font-size: 45px
+                color: white
+                text-transform: uppercase
+                letter-spacing: 4px
+                margin-top: 65px
+                text-align: center
+
+                @include mixins.small
+                    width: 50%
+                    font-size: 40px
+                    margin-top: 60px
+
+                @include mixins.extra-small
+                    padding: 0px 20px 0px 20px
+                    
+
+            div.arrow-down
+                @include mixins.background-image
+                @include mixins.flex-center
+                background-image: url("../images/icon-arrow-down.svg")
+                width: 30px
+                height: 75px
+                margin: 50px 0px 0px 0px
+
+                @include mixins.small
+                    width: 35px
+                    margin: 30px 0px 0px 0px
+
+                @include mixins.extra-small
+                    width: 35px
+                    height: 90px
+                    margin: 35px 0px 0px 0px
+
+
+    div.conteudo
+
+        section
+            @include mixins.flex-center
+            flex-direction: row
+            justify-content: space-between
+            height: 450px
+
+            @include mixins.extra-small
+                height: 700px
+                text-align: center
+
+            &.first-section
+                @include mixins.extra-small
+                    flex-direction: column-reverse
+
+            &.second-section
+                @include mixins.extra-small
+                    flex-direction: column
+
+            &.third-section
+                @include mixins.extra-small
+                    flex-direction: column 
+                    height: 900px
+
+                @include mixins.small
+                    height: 500px
+            
+            div.egg
+                @include mixins.background-image
+                background-image: url("../images/desktop/image-transform.jpg")
+                
+                @include mixins.extra-small
+                    height: 500px
+                    background-image: url("../images/mobile/image-transform.jpg")
+
+            div.stand-out
+                @include mixins.flex-center
+                @include mixins.background-image
+                background-image: url("../images/desktop/image-stand-out.jpg")
+
+                @include mixins.extra-small
+                    height: 500px
+                    background-image: url("../images/mobile/image-stand-out.jpg")
+
+            div.photography
+                @include mixins.flex-center
+                @include mixins.background-image
+                background-image: url("../images/desktop/image-photography.jpg")
+
+                @include mixins.extra-small
+                    height: 700px
+                    background-image: url("../images/mobile/image-photography.jpg")
+
+                p
+                    color: variables.$dark-blue
+
+                h3
+                    color: variables.$dark-blue
+
+
+            div.graphic-design
+                @include mixins.background-image
+                @include mixins.flex-center
+                @include mixins.extra-small
+                    height: 700px
+                    background-image: url("../images/mobile/image-graphic-design.jpg")
+                background-image: url("../images/desktop/image-graphic-design.jpg")
+
+                p
+                    color: variables.$dark-desaturated
+
+                h3
+                    color: variables.$dark-desaturated
+       
+            div.content-box
+                position: relative
+                display: flex
+                flex-direction: column
+                text-align: center
+                width: 50%
+                height: 100%
+
+                @include mixins.extra-small
+                    width: 80%
+
+                @include mixins.small
+                    width: 70%
+
+                @include mixins.medium
+                    width: 80%
+
+                div.content-bottom
+                    position: absolute
+                    bottom: 0
+                    transform: translateY(-40px)
+                    height: 120px
+                    min-height: auto
+
+                    h3
+                        font-size: 24px
+                        @include mixins.extra-small
+                            font-size: 32px
+
+                    p
+                        font-size: 14px
+                        line-height: 20px
+                        font-family: variables.$barlow
+                        margin-top: 25px
+
+                        @include mixins.extra-small
+                            font-size: 16px
+            
+            &.client-testimonials
+                height: auto
+                min-height: 500px
+                justify-content: center
+                padding: 50px 0px 50px 0px
+                
+                @include mixins.medium
+                    padding: 80px 0px 80px 0px
+
+                @include mixins.small
+                    padding: 80px 0px 80px 0px
+
+                @include mixins.extra-small
+                    padding: 80px 0px 80px 0px
+
+                div.content
+                    position: relative
+                    height: 100%
+                    width: 80%
+                    text-align: center
+
+                    header
+                        h2
+                            text-transform: uppercase
+                            font-family: variables.$fraunces
+                            letter-spacing: 3px
+                            font-size: 16px
+                            height: 100%
+                            color: variables.$grayish-blue
+                            transform: translateY(-20px)
+
+                    div.cards
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        flex-direction: row
+                        flex-wrap: wrap
+                        justify-content: center 
+                        align-items: center
+                        margin-top: 30px
+
+                        div.card
+                            @include mixins.flex-center
+                            flex-direction: column
+                            width: 33.333%
+                            height: 88%
+
+                            @include mixins.medium
+                                width: 50%
+                                padding-bottom: 30px
+
+                            @include mixins.small
+                                width: 75%
+                                padding-bottom: 40px
+
+                            @include mixins.extra-small
+                                width: 90%
+                                padding-bottom: 50px
+
+                        img
+                            width: 50px
+                            height: 50px
+                            border-radius: 50%
+
+                        p
+                            margin: 40px 0px 40px 0px
+                            padding: 0px 10px 0px 10px
+                            font-family: variables.$barlow
+                            font-size: 13px
+                            line-height: 1.5rem
+
+                        span
+                            &.name
+                                font-size: 14px
+                                font-family: variables.$fraunces
+                                font-weight: 800
+                                margin-bottom: 10px
+
+                            &.profi
+                                font-size: 12px
+                                font-family: variables.$barlow
+                                color: variables.$grayish-blue
+                                
+
+
+        div.content-text
+            @include mixins.flex-center
+            width: 100%
+            height: 100%
+
+            &.mg-right
+                transform: translateX(-20px)
+                @include mixins.extra-small
+                    transform: translateX(0px)
+
+            div
+                transform: translateX(10px)
+                width: 70%
+
+                @include mixins.extra-small
+                    width: 80%
+                    transform: translateX(0px)
+
+                h3
+                    font-size: 38px
+                    color: variables.$very-dark-desaturated-blue
+                    font-weight: 900
+
+                p
+                    font-size: 14px
+                    font-family: variables.$barlow
+                    color: variables.$dark-grayish-blue
+                    line-height: 20px
+                    margin-top: 25px
+                    margin-bottom: 25px
+
+                    @include mixins.extra-small
+                        font-size: 16px
+
+                a
+                    width: 107px
+                    text-transform: uppercase
+                    color: variables.$very-dark-desaturated-blue
+                    font-size: 14px
+                    font-weight: 700
+                    letter-spacing: 1px
+
+    footer
+        width: 100%
+        height: auto
+        min-height: 550px
+        background: gray
+
+        div.images-footer
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 100%
+            height: 275px
+
+            @include mixins.extra-small
+                    height: 300px
+                    flex-direction: column
+
+            div.img-footer  
+                width: 100%
+                height: 100%
+                background-size: 100% 100%  
+                background-repeat: no-repeat
+                width: 50%
+                height: 100%
+
+            div
+                display: flex
+                flex-direction: row
+                width: 100%
+                height: 100%
+
+            div#milkbottles
+                background-image: url("../images/desktop/image-gallery-milkbottles.jpg")
+                
+                @include mixins.small
+                    background-image: url("../images/mobile/image-gallery-milkbottles.jpg")
+
+                @include mixins.extra-small
+                    background-image: url("../images/mobile/image-gallery-milkbottles.jpg")
+
+            div#orange
+                background-image: url("../images/desktop/image-gallery-orange.jpg")
+                
+                @include mixins.small
+                    background-image: url("../images/mobile/image-gallery-orange.jpg")
+
+                @include mixins.extra-small
+                    background-image: url("../images/mobile/image-gallery-orange.jpg")
+
+            div#cone
+                background-image: url("../images/desktop/image-gallery-cone.jpg")
+                
+                @include mixins.small
+                    background-image: url("../images/mobile/image-gallery-cone.jpg")
+
+                @include mixins.extra-small
+                    background-image: url("../images/mobile/image-gallery-cone.jpg")
+
+            div#sugarcubes
+                background-image: url("../images/desktop/image-gallery-sugarcubes.jpg")
+                
+                @include mixins.small
+                    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg")
+
+                @include mixins.extra-small
+                    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg")
+        
+        div.footer-links
+            @include mixins.flex-center
+            width: 100%
+            height: 275px
+            background-color: variables.$footer
+
+            div.content-footer
+                @include mixins.flex-center
+                padding: 30px 0px 30px 0px
+                flex-direction: column
+                height: 100%
+                width: 300px
+                text-align: center
+            
+            div
+                a.logo
+                    @include mixins.background-image
+                    width: 100px
+                    height: 20px
+                    background-image: url("../images/logo.svg")
+                    transform: translateY(20px)
+
+                ul
+                    @include mixins.flex-center
+                    width: 100%
+                    list-style: none
+
+                    &.links
+                        margin: auto 0px auto 0px
+                        transform: translateY(-20px)
+
+                        li
+                            margin: 0px 25px 0px 25px
+                            font-family: variables.$barlow
+                            color: variables.$dark-moderate
+
+                            a
+                                text-decoration: none
+                                color: variables.$dark-moderate
+                                font-size: 13px
+                                font-weight: 600
+                    
+                    &.midia-links
+                        transform: translateY(-20px)
+
+                        li
+                            margin: 0px 10px 0px 10px
+                            
+                            a
+                                color: variables.$dark-moderate
+
+
+
+
+
+           
+
+
