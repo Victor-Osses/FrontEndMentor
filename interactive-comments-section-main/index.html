@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/comment.css">
+  <link rel="stylesheet" href="css/reply.css">
+  <link rel="stylesheet" href="css/comment-form.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Interactive comments section</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <ul id="comments-list"></ul> 
+
+    <div id="" class="comment-form-content template-comment-form"> 
+      <form class="comment-form flex-start template-form">
+        <img src="images/avatars/image-juliusomo.png" class="avatar-image you" alt="juliusomo image">
+        <textarea name="" id="" rows="5" class="comment-input" placeholder="Add a comment..."></textarea>
+        <button type="submit" class="btn-send">Send</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Template Comment -->
+  <li id="" class="comment-container template-comment hide">
+
+    <div class="comment">
+        <form method="" class="like-form">
+          <button type="submit" class="add-like">
+            <i class="fa fa-plus"></i>
+          </button>
+          <span class="like-counts"></span>
+          <button type="submit" class="add-dislike">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </form>
+      <div class="comment-content">
+        <div class="comment-content-header">
+          <div class="d-flex">
+            <img src="" class="avatar-image">
+            <span class="name"></span>
+            <span class="time-ago"></span>
+          </div>
+          <form method="" class="reply-form">
+          <button type="submit" class="btn-reply">
+            <i class="fa-solid fa-reply"></i><span>Reply</span>
+            </button>
+          </form>
+        </div>
+        <div class="comment-content-text">
+          <p class="comment-text"></p>
+        </div>
+      </div>
+    </div>
+
+  </li>
+
+ <!-- Template Reply -->
+  <li id="" class="reply reply-template hide">
+
+    <div class="comment-like-container">
+        <form method="" class="like-form">
+          <button type="submit">
+            <i class="add-like fa fa-plus"></i>
+          </button>
+          <span class="like-counts"></span>
+          <button type="submit">
+            <i class="add-dislike fa-solid fa-minus"></i>
+          </button>
+        </form>
+    </div>
+    <div class="comment-content">
+      <div class="comment-content-header">
+        <div class="d-flex">
+          <img src="" class="avatar-image">
+          <span class="name"></span>
+          <span class="time-ago"></span>
+        </div>
+        <form method="" class="reply-form">
+          <button type="submit" class="btn-reply">
+            <i class="fa-solid fa-reply"></i><span>Reply</span>
+          </button>
+        </form>
+      </div>
+      <div class="comment-content-text">
+        <p class="comment-text"></p>
+      </div>
+    </div>
+  
+  </li>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Victor Hugo Costa Osses</a>.
+  </div>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ab30c524c7.js" crossorigin="anonymous"></script>
+
+  <!-- My Script -->
+  <script src="js/script.js"></script>
+  
+</body>
+</html>

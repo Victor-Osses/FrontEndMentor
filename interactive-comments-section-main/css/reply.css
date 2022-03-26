@@ -1,0 +1,55 @@
+.reply-form{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.reply-form  > *{
+    color: hsl(238, 40%, 52%);
+}
+
+.reply-form button i{
+    font-size: 16px;
+}
+
+.reply-form button span{
+    margin-left: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.reply-list{
+    margin-left:  auto;
+    background: transparent;
+    border-left: 1px solid hsl(0, 0%, 82%);
+    height: auto;
+    width: 95%;
+    padding-left: 20px;
+}
+
+.reply{
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.replyingTo{
+    color: hsl(238, 40%, 52%);
+    font-weight: 700;
+}
+
+@media (max-width: 761px){
+    .reply{
+        flex-direction: column-reverse;
+        padding: 20px; 
+    }
+
+    .reply-form{
+        top: 100%;
+        transform: translateY(-50px);
+        right: 20px;
+    }
+}

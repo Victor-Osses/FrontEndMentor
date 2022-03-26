@@ -29,6 +29,7 @@ body header.background-header menu {
   justify-content: center;
   justify-content: space-between;
   width: 100%;
+  margin: 0 auto;
   height: 50px;
   padding: 20px 30px 0px 30px;
 }
@@ -54,12 +55,12 @@ body header.background-header menu ul {
   }
 }
 body header.background-header menu ul li {
-  margin: 0px 15px 0px 15px;
+  margin: 0px 20px 0px 20px;
 }
 body header.background-header menu ul li a {
   color: white;
   font-family: "Barlow", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 body header.background-header menu ul li a.contact {
   color: white;

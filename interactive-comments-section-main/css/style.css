@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:  hsl(223, 19%, 93%);
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.container{
+    width: 700px;
+    max-width: 90vw;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+}
+
+.hide{
+    display: none;
+    visibility: hide;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
